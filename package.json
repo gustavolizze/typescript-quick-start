@@ -1,9 +1,6 @@
 {
 	"name": "nutrip-api",
 	"version": "1.0.0",
-	"engines": {
-		"node": ">=14.15.4"
-	},
 	"description": "",
 	"scripts": {
 		"prebuild": "rimraf build",
@@ -15,12 +12,12 @@
 		"debug": "NODE_PATH=./src ts-node-dev --inspect --respawn --transpile-only --pretty src/bootstrap",
 		"test": "jest --watch",
 		"format:staged": "pretty-quick --staged",
-		"lint:staged": "lint-staged",
+		"lint:staged": "lint-staged --debug",
 		"commit": "npm run lint:staged && npm run format:staged"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run format:staged"
+			"pre-commit": "npm run commit"
 		}
 	},
 	"lint-staged": {
@@ -40,14 +37,14 @@
 		"@typescript-eslint/eslint-plugin": "^4.13.0",
 		"@typescript-eslint/parser": "^4.13.0",
 		"cpy-cli": "^3.1.1",
-		"eslint": "^7.17.0",
+		"eslint": "7.12.1",
 		"eslint-config-prettier": "^7.1.0",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-sonarjs": "^0.5.0",
 		"husky": "^4.3.7",
 		"jest": "^26.6.3",
 		"jest-extended": "^0.11.5",
-		"lint-staged": "^10.5.3",
+		"lint-staged": "^10.5.0",
 		"prettier": "^2.2.1",
 		"pretty-quick": "^3.1.0",
 		"rimraf": "^3.0.2",

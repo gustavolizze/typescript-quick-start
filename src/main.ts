@@ -9,5 +9,5 @@ export function main(): void {
 		environment: 'node',
 	});
 
-	console.log('Hello Word');
+	console.log('Hello Word!');
 }

@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
 	overrides: [
 		{
@@ -24,14 +22,13 @@ module.exports = {
 			],
 			settings: {
 				node: {
-					resolvePaths: [
-						__dirname,
-						path.resolve(process.cwd(), process.env.NODE_PATH),
-					],
+					resolvePaths: [__dirname],
 					tryExtensions: ['.js', '.json', '.node', '.ts'],
 				},
 			},
 			rules: {
+				'node/no-missing-import': 'off',
+				'node/no-extraneous-import': 'off',
 				'node/no-unsupported-features/es-syntax': [
 					'error',
 					{ ignores: ['modules'] },
