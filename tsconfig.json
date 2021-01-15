@@ -1,0 +1,37 @@
+{
+	"compilerOptions": {
+		/* Compiler Options */
+		"outDir": "./build",
+		"lib": ["es2020"],
+		"module": "commonjs",
+		"target": "es2020",
+		"declaration": true,
+		"sourceMap": true,
+		"removeComments": true,
+		"importHelpers": true,
+		"preserveConstEnums": true,
+
+		/* Strict Type-Checking Options */
+		"strict": true,
+		"strictNullChecks": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": true,
+		"alwaysStrict": true,
+
+		/* Additional Checks */
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+
+		/* Module Resolution Options */
+		"baseUrl": "./src",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": ["src", "./global.d.ts"]
+}
